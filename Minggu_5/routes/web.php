@@ -20,6 +20,8 @@ use App\Http\Controllers\TaskController;
 Route::get('/task/{task}', [TaskController::class, 'show']);
 Route::get('/task/{task}/edit',[TaskController::class,'edit']);
 Route::put('/task/{task}', [TaskController::class, 'update']);
+Route::get('/task', [TaskController::class, 'index']);
+Route::get('/task/create',[TaskController::class,'create']);
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,9 +31,8 @@ Route::get('/keren', function () {
     return 'Aku adalah power';
 });
 
-Route::get('/task/create',[TaskController::class,'create']);
+
 Route::get('/voter', [VoterController::class, 'viewVoter']);
-Route::get('/task', [TaskController::class, 'index']);
 Route::post('/task/store',[TaskController::class,'store']);
 
 

@@ -27,7 +27,7 @@ class TaskController extends Controller
     }
     public function update(Task $task, TaskRequest $request){
         $task->update($request->validated());
-        return redirect('/task');
+        return redirect('/task'); 
     }
     
 }

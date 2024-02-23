@@ -28,7 +28,7 @@ Route::get('/keren', function () {
 
 Route::get('/voter', [VoterController::class, 'viewVoter']);
 Route::get('/task', [TaskController::class, 'index']);
-
+Route::get('/task/create', [TaskController::class, 'create']);
 
 
 Route::get('/subject/student', [SubjectController::class, 'viewS_Student']);
