@@ -22,7 +22,7 @@ Route::get('/task/{task}/edit',[TaskController::class,'edit']);
 Route::put('/task/{task}', [TaskController::class, 'update']);
 Route::get('/task', [TaskController::class, 'index']);
 Route::get('/task/create',[TaskController::class,'create']);
-
+Route::delete('/task/{task}', [TaskController::class, 'delete']);
 Route::get('/', function () {
     return view('welcome');
 });

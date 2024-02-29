@@ -29,5 +29,9 @@ class TaskController extends Controller
         $task->update($request->validated());
         return redirect('/task'); 
     }
+    public function delete(Task $task){
+        $task->delete();
+        return redirect('/task');
+    }
     
 }
